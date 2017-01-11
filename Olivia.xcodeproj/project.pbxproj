@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B848AF71E262F2500059934 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B848AF61E262F2500059934 /* AppDelegate.swift */; };
+		2B848AF91E262F2500059934 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B848AF81E262F2500059934 /* ViewController.swift */; };
+		2B848AFC1E262F2500059934 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B848AFA1E262F2500059934 /* Main.storyboard */; };
+		2B848AFE1E262F2500059934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B848AFD1E262F2500059934 /* Assets.xcassets */; };
+		2B848B011E262F2500059934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B848AFF1E262F2500059934 /* LaunchScreen.storyboard */; };
+		2B848B0C1E262F2500059934 /* OliviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B848B0B1E262F2500059934 /* OliviaTests.swift */; };
+		2B848B171E262F2500059934 /* OliviaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B848B161E262F2500059934 /* OliviaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B848B081E262F2500059934 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B848AEB1E262F2500059934 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B848AF21E262F2500059934;
+			remoteInfo = Olivia;
+		};
+		2B848B131E262F2500059934 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B848AEB1E262F2500059934 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B848AF21E262F2500059934;
+			remoteInfo = Olivia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B848AF31E262F2500059934 /* Olivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Olivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B848AF61E262F2500059934 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B848AF81E262F2500059934 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B848AFB1E262F2500059934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B848AFD1E262F2500059934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B848B001E262F2500059934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B848B021E262F2500059934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B848B071E262F2500059934 /* OliviaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OliviaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B848B0B1E262F2500059934 /* OliviaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OliviaTests.swift; sourceTree = "<group>"; };
+		2B848B0D1E262F2500059934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B848B121E262F2500059934 /* OliviaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OliviaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B848B161E262F2500059934 /* OliviaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OliviaUITests.swift; sourceTree = "<group>"; };
+		2B848B181E262F2500059934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B848AF01E262F2500059934 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B848B041E262F2500059934 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B848B0F1E262F2500059934 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B848AEA1E262F2500059934 = {
+			isa = PBXGroup;
+			children = (
+				2B848AF51E262F2500059934 /* Olivia */,
+				2B848B0A1E262F2500059934 /* OliviaTests */,
+				2B848B151E262F2500059934 /* OliviaUITests */,
+				2B848AF41E262F2500059934 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B848AF41E262F2500059934 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B848AF31E262F2500059934 /* Olivia.app */,
+				2B848B071E262F2500059934 /* OliviaTests.xctest */,
+				2B848B121E262F2500059934 /* OliviaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B848AF51E262F2500059934 /* Olivia */ = {
+			isa = PBXGroup;
+			children = (
+				2B848AF61E262F2500059934 /* AppDelegate.swift */,
+				2B848AF81E262F2500059934 /* ViewController.swift */,
+				2B848AFA1E262F2500059934 /* Main.storyboard */,
+				2B848AFD1E262F2500059934 /* Assets.xcassets */,
+				2B848AFF1E262F2500059934 /* LaunchScreen.storyboard */,
+				2B848B021E262F2500059934 /* Info.plist */,
+			);
+			path = Olivia;
+			sourceTree = "<group>";
+		};
+		2B848B0A1E262F2500059934 /* OliviaTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B848B0B1E262F2500059934 /* OliviaTests.swift */,
+				2B848B0D1E262F2500059934 /* Info.plist */,
+			);
+			path = OliviaTests;
+			sourceTree = "<group>";
+		};
+		2B848B151E262F2500059934 /* OliviaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B848B161E262F2500059934 /* OliviaUITests.swift */,
+				2B848B181E262F2500059934 /* Info.plist */,
+			);
+			path = OliviaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B848AF21E262F2500059934 /* Olivia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B848B1B1E262F2500059934 /* Build configuration list for PBXNativeTarget "Olivia" */;
+			buildPhases = (
+				2B848AEF1E262F2500059934 /* Sources */,
+				2B848AF01E262F2500059934 /* Frameworks */,
+				2B848AF11E262F2500059934 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Olivia;
+			productName = Olivia;
+			productReference = 2B848AF31E262F2500059934 /* Olivia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B848B061E262F2500059934 /* OliviaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B848B1E1E262F2500059934 /* Build configuration list for PBXNativeTarget "OliviaTests" */;
+			buildPhases = (
+				2B848B031E262F2500059934 /* Sources */,
+				2B848B041E262F2500059934 /* Frameworks */,
+				2B848B051E262F2500059934 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B848B091E262F2500059934 /* PBXTargetDependency */,
+			);
+			name = OliviaTests;
+			productName = OliviaTests;
+			productReference = 2B848B071E262F2500059934 /* OliviaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B848B111E262F2500059934 /* OliviaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B848B211E262F2500059934 /* Build configuration list for PBXNativeTarget "OliviaUITests" */;
+			buildPhases = (
+				2B848B0E1E262F2500059934 /* Sources */,
+				2B848B0F1E262F2500059934 /* Frameworks */,
+				2B848B101E262F2500059934 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B848B141E262F2500059934 /* PBXTargetDependency */,
+			);
+			name = OliviaUITests;
+			productName = OliviaUITests;
+			productReference = 2B848B121E262F2500059934 /* OliviaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B848AEB1E262F2500059934 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "BESLAN TULAROV";
+				TargetAttributes = {
+					2B848AF21E262F2500059934 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = MTVD7A69KL;
+						ProvisioningStyle = Automatic;
+					};
+					2B848B061E262F2500059934 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2B848AF21E262F2500059934;
+					};
+					2B848B111E262F2500059934 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2B848AF21E262F2500059934;
+					};
+				};
+			};
+			buildConfigurationList = 2B848AEE1E262F2500059934 /* Build configuration list for PBXProject "Olivia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B848AEA1E262F2500059934;
+			productRefGroup = 2B848AF41E262F2500059934 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B848AF21E262F2500059934 /* Olivia */,
+				2B848B061E262F2500059934 /* OliviaTests */,
+				2B848B111E262F2500059934 /* OliviaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B848AF11E262F2500059934 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B848B011E262F2500059934 /* LaunchScreen.storyboard in Resources */,
+				2B848AFE1E262F2500059934 /* Assets.xcassets in Resources */,
+				2B848AFC1E262F2500059934 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B848B051E262F2500059934 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B848B101E262F2500059934 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B848AEF1E262F2500059934 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B848AF91E262F2500059934 /* ViewController.swift in Sources */,
+				2B848AF71E262F2500059934 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B848B031E262F2500059934 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B848B0C1E262F2500059934 /* OliviaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B848B0E1E262F2500059934 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B848B171E262F2500059934 /* OliviaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B848B091E262F2500059934 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B848AF21E262F2500059934 /* Olivia */;
+			targetProxy = 2B848B081E262F2500059934 /* PBXContainerItemProxy */;
+		};
+		2B848B141E262F2500059934 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B848AF21E262F2500059934 /* Olivia */;
+			targetProxy = 2B848B131E262F2500059934 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B848AFA1E262F2500059934 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B848AFB1E262F2500059934 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B848AFF1E262F2500059934 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B848B001E262F2500059934 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B848B191E262F2500059934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B848B1A1E262F2500059934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B848B1C1E262F2500059934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MTVD7A69KL;
+				INFOPLIST_FILE = Olivia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BTR.Olivia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2B848B1D1E262F2500059934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MTVD7A69KL;
+				INFOPLIST_FILE = Olivia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BTR.Olivia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2B848B1F1E262F2500059934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OliviaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BTR.OliviaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Olivia.app/Olivia";
+			};
+			name = Debug;
+		};
+		2B848B201E262F2500059934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OliviaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BTR.OliviaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Olivia.app/Olivia";
+			};
+			name = Release;
+		};
+		2B848B221E262F2500059934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = OliviaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BTR.OliviaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Olivia;
+			};
+			name = Debug;
+		};
+		2B848B231E262F2500059934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = OliviaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BTR.OliviaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Olivia;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B848AEE1E262F2500059934 /* Build configuration list for PBXProject "Olivia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B848B191E262F2500059934 /* Debug */,
+				2B848B1A1E262F2500059934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B848B1B1E262F2500059934 /* Build configuration list for PBXNativeTarget "Olivia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B848B1C1E262F2500059934 /* Debug */,
+				2B848B1D1E262F2500059934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2B848B1E1E262F2500059934 /* Build configuration list for PBXNativeTarget "OliviaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B848B1F1E262F2500059934 /* Debug */,
+				2B848B201E262F2500059934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2B848B211E262F2500059934 /* Build configuration list for PBXNativeTarget "OliviaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B848B221E262F2500059934 /* Debug */,
+				2B848B231E262F2500059934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B848AEB1E262F2500059934 /* Project object */;
+}

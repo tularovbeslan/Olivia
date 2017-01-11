@@ -1,0 +1,6 @@
+framework module Pods_Olivia {
+  umbrella header "Pods-Olivia-umbrella.h"
+
+  export *
+  module * { export * }
+}

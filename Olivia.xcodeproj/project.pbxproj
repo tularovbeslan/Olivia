@@ -7,20 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B26A8E11E27C6E9001454A9 /* NeuzeitGro Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26A8DB1E27C6E9001454A9 /* NeuzeitGro Bold.ttf */; };
-		2B26A8E21E27C6E9001454A9 /* NeuzeitGro-Bla.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26A8DC1E27C6E9001454A9 /* NeuzeitGro-Bla.ttf */; };
-		2B26A8E31E27C6E9001454A9 /* NeuzeitGro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26A8DD1E27C6E9001454A9 /* NeuzeitGro.ttf */; };
-		2B26A8E41E27C6E9001454A9 /* NeuzeitGroCon-Bla.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26A8DE1E27C6E9001454A9 /* NeuzeitGroCon-Bla.ttf */; };
-		2B26A8E51E27C6E9001454A9 /* NeuzeitGroExtBla.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26A8DF1E27C6E9001454A9 /* NeuzeitGroExtBla.ttf */; };
-		2B26A8E61E27C6E9001454A9 /* NeuzeitGroLig.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26A8E01E27C6E9001454A9 /* NeuzeitGroLig.ttf */; };
-		2B26A8EB1E27C8C2001454A9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26A8EA1E27C8C2001454A9 /* User.swift */; };
-		2B26A8ED1E27CA07001454A9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26A8EC1E27CA07001454A9 /* Product.swift */; };
+		2B162A8D1E291A430086F145 /* NeuzeitGroLig.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 2B221E0D1E290ED000E21271 /* NeuzeitGroLig.ttf */; };
+		2B162A8E1E291A460086F145 /* NeuzeitGro Bold.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 2B221E081E290ED000E21271 /* NeuzeitGro Bold.ttf */; };
+		2B162A8F1E291A490086F145 /* NeuzeitGro-Bla.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 2B221E091E290ED000E21271 /* NeuzeitGro-Bla.ttf */; };
+		2B162A901E291A4D0086F145 /* NeuzeitGro.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 2B221E0A1E290ED000E21271 /* NeuzeitGro.ttf */; };
+		2B162A911E291A500086F145 /* NeuzeitGroCon-Bla.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 2B221E0B1E290ED000E21271 /* NeuzeitGroCon-Bla.ttf */; };
+		2B162A921E291A530086F145 /* NeuzeitGroExtBla.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 2B221E0C1E290ED000E21271 /* NeuzeitGroExtBla.ttf */; };
+		2B221E061E290D7C00E21271 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B221E041E290D7C00E21271 /* Product.swift */; };
+		2B221E071E290D7C00E21271 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B221E051E290D7C00E21271 /* User.swift */; };
+		2B221E0E1E290ED000E21271 /* NeuzeitGro Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B221E081E290ED000E21271 /* NeuzeitGro Bold.ttf */; };
+		2B221E0F1E290ED000E21271 /* NeuzeitGro-Bla.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B221E091E290ED000E21271 /* NeuzeitGro-Bla.ttf */; };
+		2B221E101E290ED000E21271 /* NeuzeitGro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B221E0A1E290ED000E21271 /* NeuzeitGro.ttf */; };
+		2B221E111E290ED000E21271 /* NeuzeitGroCon-Bla.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B221E0B1E290ED000E21271 /* NeuzeitGroCon-Bla.ttf */; };
+		2B221E121E290ED000E21271 /* NeuzeitGroExtBla.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B221E0C1E290ED000E21271 /* NeuzeitGroExtBla.ttf */; };
+		2B221E131E290ED000E21271 /* NeuzeitGroLig.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B221E0D1E290ED000E21271 /* NeuzeitGroLig.ttf */; };
 		2B848AF71E262F2500059934 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B848AF61E262F2500059934 /* AppDelegate.swift */; };
 		2B848AF91E262F2500059934 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B848AF81E262F2500059934 /* ViewController.swift */; };
 		2B848AFE1E262F2500059934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B848AFD1E262F2500059934 /* Assets.xcassets */; };
 		2B848B011E262F2500059934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B848AFF1E262F2500059934 /* LaunchScreen.storyboard */; };
 		2B848B0C1E262F2500059934 /* OliviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B848B0B1E262F2500059934 /* OliviaTests.swift */; };
 		2B848B171E262F2500059934 /* OliviaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B848B161E262F2500059934 /* OliviaUITests.swift */; };
+		2B989F011E291CF100108049 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B989F001E291CF100108049 /* API.swift */; };
+		D016FAE83A15202DED71D66B /* Pods_Olivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFD52ADAA36FE8271610C2E /* Pods_Olivia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,14 +49,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2B26A8DB1E27C6E9001454A9 /* NeuzeitGro Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeuzeitGro Bold.ttf"; sourceTree = "<group>"; };
-		2B26A8DC1E27C6E9001454A9 /* NeuzeitGro-Bla.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeuzeitGro-Bla.ttf"; sourceTree = "<group>"; };
-		2B26A8DD1E27C6E9001454A9 /* NeuzeitGro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeuzeitGro.ttf; sourceTree = "<group>"; };
-		2B26A8DE1E27C6E9001454A9 /* NeuzeitGroCon-Bla.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeuzeitGroCon-Bla.ttf"; sourceTree = "<group>"; };
-		2B26A8DF1E27C6E9001454A9 /* NeuzeitGroExtBla.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeuzeitGroExtBla.ttf; sourceTree = "<group>"; };
-		2B26A8E01E27C6E9001454A9 /* NeuzeitGroLig.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeuzeitGroLig.ttf; sourceTree = "<group>"; };
-		2B26A8EA1E27C8C2001454A9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		2B26A8EC1E27CA07001454A9 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		2B221E041E290D7C00E21271 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Product.swift; path = Model/Product.swift; sourceTree = "<group>"; };
+		2B221E051E290D7C00E21271 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
+		2B221E081E290ED000E21271 /* NeuzeitGro Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NeuzeitGro Bold.ttf"; path = "Fonts/NeuzeitGro Bold.ttf"; sourceTree = "<group>"; };
+		2B221E091E290ED000E21271 /* NeuzeitGro-Bla.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NeuzeitGro-Bla.ttf"; path = "Fonts/NeuzeitGro-Bla.ttf"; sourceTree = "<group>"; };
+		2B221E0A1E290ED000E21271 /* NeuzeitGro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NeuzeitGro.ttf; path = Fonts/NeuzeitGro.ttf; sourceTree = "<group>"; };
+		2B221E0B1E290ED000E21271 /* NeuzeitGroCon-Bla.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NeuzeitGroCon-Bla.ttf"; path = "Fonts/NeuzeitGroCon-Bla.ttf"; sourceTree = "<group>"; };
+		2B221E0C1E290ED000E21271 /* NeuzeitGroExtBla.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NeuzeitGroExtBla.ttf; path = Fonts/NeuzeitGroExtBla.ttf; sourceTree = "<group>"; };
+		2B221E0D1E290ED000E21271 /* NeuzeitGroLig.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NeuzeitGroLig.ttf; path = Fonts/NeuzeitGroLig.ttf; sourceTree = "<group>"; };
 		2B848AF31E262F2500059934 /* Olivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Olivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B848AF61E262F2500059934 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B848AF81E262F2500059934 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +69,10 @@
 		2B848B121E262F2500059934 /* OliviaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OliviaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B848B161E262F2500059934 /* OliviaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OliviaUITests.swift; sourceTree = "<group>"; };
 		2B848B181E262F2500059934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B989F001E291CF100108049 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		62C78FC685E146DF0B6D9B55 /* Pods-Olivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Olivia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Olivia/Pods-Olivia.debug.xcconfig"; sourceTree = "<group>"; };
+		B1E5854035266B559F65C85C /* Pods-Olivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Olivia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Olivia/Pods-Olivia.release.xcconfig"; sourceTree = "<group>"; };
+		FBFD52ADAA36FE8271610C2E /* Pods_Olivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Olivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D016FAE83A15202DED71D66B /* Pods_Olivia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,15 +101,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		020D58E8C9E247AD8DD9233C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBFD52ADAA36FE8271610C2E /* Pods_Olivia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B221E031E290D3500E21271 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B221E041E290D7C00E21271 /* Product.swift */,
+				2B221E051E290D7C00E21271 /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		2B26A8E71E27C6ED001454A9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				2B26A8DB1E27C6E9001454A9 /* NeuzeitGro Bold.ttf */,
-				2B26A8DC1E27C6E9001454A9 /* NeuzeitGro-Bla.ttf */,
-				2B26A8DD1E27C6E9001454A9 /* NeuzeitGro.ttf */,
-				2B26A8DE1E27C6E9001454A9 /* NeuzeitGroCon-Bla.ttf */,
-				2B26A8DF1E27C6E9001454A9 /* NeuzeitGroExtBla.ttf */,
-				2B26A8E01E27C6E9001454A9 /* NeuzeitGroLig.ttf */,
+				2B221E081E290ED000E21271 /* NeuzeitGro Bold.ttf */,
+				2B221E091E290ED000E21271 /* NeuzeitGro-Bla.ttf */,
+				2B221E0A1E290ED000E21271 /* NeuzeitGro.ttf */,
+				2B221E0B1E290ED000E21271 /* NeuzeitGroCon-Bla.ttf */,
+				2B221E0C1E290ED000E21271 /* NeuzeitGroExtBla.ttf */,
+				2B221E0D1E290ED000E21271 /* NeuzeitGroLig.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -108,6 +138,8 @@
 				2B848B0A1E262F2500059934 /* OliviaTests */,
 				2B848B151E262F2500059934 /* OliviaUITests */,
 				2B848AF41E262F2500059934 /* Products */,
+				965D8FC6B6D4E9B918501F73 /* Pods */,
+				020D58E8C9E247AD8DD9233C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,8 +158,8 @@
 			children = (
 				2B848AF61E262F2500059934 /* AppDelegate.swift */,
 				2B848AF81E262F2500059934 /* ViewController.swift */,
-				2B26A8EA1E27C8C2001454A9 /* User.swift */,
-				2B26A8EC1E27CA07001454A9 /* Product.swift */,
+				2B989F001E291CF100108049 /* API.swift */,
+				2B221E031E290D3500E21271 /* Model */,
 				2B26A8E71E27C6ED001454A9 /* Fonts */,
 				2B848AFD1E262F2500059934 /* Assets.xcassets */,
 				2B848AFF1E262F2500059934 /* LaunchScreen.storyboard */,
@@ -154,6 +186,15 @@
 			path = OliviaUITests;
 			sourceTree = "<group>";
 		};
+		965D8FC6B6D4E9B918501F73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62C78FC685E146DF0B6D9B55 /* Pods-Olivia.debug.xcconfig */,
+				B1E5854035266B559F65C85C /* Pods-Olivia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B848B1B1E262F2500059934 /* Build configuration list for PBXNativeTarget "Olivia" */;
 			buildPhases = (
+				EEEFDAB74B31F4C5CA18A0BD /* [CP] Check Pods Manifest.lock */,
 				2B848AEF1E262F2500059934 /* Sources */,
 				2B848AF01E262F2500059934 /* Frameworks */,
 				2B848AF11E262F2500059934 /* Resources */,
+				497A9B20ADA5839DBADFD4B8 /* [CP] Embed Pods Frameworks */,
+				8EA76C459494CE6CEDBB6446 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,13 +306,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B26A8E11E27C6E9001454A9 /* NeuzeitGro Bold.ttf in Resources */,
 				2B848B011E262F2500059934 /* LaunchScreen.storyboard in Resources */,
-				2B26A8E31E27C6E9001454A9 /* NeuzeitGro.ttf in Resources */,
-				2B26A8E21E27C6E9001454A9 /* NeuzeitGro-Bla.ttf in Resources */,
-				2B26A8E61E27C6E9001454A9 /* NeuzeitGroLig.ttf in Resources */,
-				2B26A8E51E27C6E9001454A9 /* NeuzeitGroExtBla.ttf in Resources */,
-				2B26A8E41E27C6E9001454A9 /* NeuzeitGroCon-Bla.ttf in Resources */,
+				2B221E101E290ED000E21271 /* NeuzeitGro.ttf in Resources */,
+				2B221E121E290ED000E21271 /* NeuzeitGroExtBla.ttf in Resources */,
+				2B221E0E1E290ED000E21271 /* NeuzeitGro Bold.ttf in Resources */,
+				2B221E111E290ED000E21271 /* NeuzeitGroCon-Bla.ttf in Resources */,
+				2B221E131E290ED000E21271 /* NeuzeitGroLig.ttf in Resources */,
+				2B221E0F1E290ED000E21271 /* NeuzeitGro-Bla.ttf in Resources */,
 				2B848AFE1E262F2500059934 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,15 +333,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		497A9B20ADA5839DBADFD4B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Olivia/Pods-Olivia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EA76C459494CE6CEDBB6446 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Olivia/Pods-Olivia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEEFDAB74B31F4C5CA18A0BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B848AEF1E262F2500059934 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B989F011E291CF100108049 /* API.swift in Sources */,
+				2B162A921E291A530086F145 /* NeuzeitGroExtBla.ttf in Sources */,
+				2B162A911E291A500086F145 /* NeuzeitGroCon-Bla.ttf in Sources */,
+				2B162A901E291A4D0086F145 /* NeuzeitGro.ttf in Sources */,
+				2B162A8F1E291A490086F145 /* NeuzeitGro-Bla.ttf in Sources */,
+				2B162A8E1E291A460086F145 /* NeuzeitGro Bold.ttf in Sources */,
+				2B162A8D1E291A430086F145 /* NeuzeitGroLig.ttf in Sources */,
+				2B221E071E290D7C00E21271 /* User.swift in Sources */,
 				2B848AF91E262F2500059934 /* ViewController.swift in Sources */,
-				2B26A8ED1E27CA07001454A9 /* Product.swift in Sources */,
 				2B848AF71E262F2500059934 /* AppDelegate.swift in Sources */,
-				2B26A8EB1E27C8C2001454A9 /* User.swift in Sources */,
+				2B221E061E290D7C00E21271 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +538,7 @@
 		};
 		2B848B1C1E262F2500059934 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62C78FC685E146DF0B6D9B55 /* Pods-Olivia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MTVD7A69KL;
@@ -452,6 +552,7 @@
 		};
 		2B848B1D1E262F2500059934 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1E5854035266B559F65C85C /* Pods-Olivia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MTVD7A69KL;

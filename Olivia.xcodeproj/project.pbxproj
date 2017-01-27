@@ -28,6 +28,8 @@
 		2B848B0C1E262F2500059934 /* OliviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B848B0B1E262F2500059934 /* OliviaTests.swift */; };
 		2B848B171E262F2500059934 /* OliviaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B848B161E262F2500059934 /* OliviaUITests.swift */; };
 		2B989F011E291CF100108049 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B989F001E291CF100108049 /* API.swift */; };
+		2BFFCF261E3B804800AE5AD5 /* StackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFFCF251E3B804800AE5AD5 /* StackTest.swift */; };
+		2BFFCF281E3B816600AE5AD5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFFCF271E3B816600AE5AD5 /* Person.swift */; };
 		D016FAE83A15202DED71D66B /* Pods_Olivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFD52ADAA36FE8271610C2E /* Pods_Olivia.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		2B848B161E262F2500059934 /* OliviaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OliviaUITests.swift; sourceTree = "<group>"; };
 		2B848B181E262F2500059934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B989F001E291CF100108049 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2BFFCF251E3B804800AE5AD5 /* StackTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTest.swift; sourceTree = "<group>"; };
+		2BFFCF271E3B816600AE5AD5 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		62C78FC685E146DF0B6D9B55 /* Pods-Olivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Olivia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Olivia/Pods-Olivia.debug.xcconfig"; sourceTree = "<group>"; };
 		B1E5854035266B559F65C85C /* Pods-Olivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Olivia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Olivia/Pods-Olivia.release.xcconfig"; sourceTree = "<group>"; };
 		FBFD52ADAA36FE8271610C2E /* Pods_Olivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Olivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				2B848AF61E262F2500059934 /* AppDelegate.swift */,
+				2BFFCF251E3B804800AE5AD5 /* StackTest.swift */,
+				2BFFCF271E3B816600AE5AD5 /* Person.swift */,
 				2B848AF81E262F2500059934 /* ViewController.swift */,
 				2B989F001E291CF100108049 /* API.swift */,
 				2B221E031E290D3500E21271 /* Model */,
@@ -394,7 +400,9 @@
 				2B162A8E1E291A460086F145 /* NeuzeitGro Bold.ttf in Sources */,
 				2B162A8D1E291A430086F145 /* NeuzeitGroLig.ttf in Sources */,
 				2B221E071E290D7C00E21271 /* User.swift in Sources */,
+				2BFFCF261E3B804800AE5AD5 /* StackTest.swift in Sources */,
 				2B848AF91E262F2500059934 /* ViewController.swift in Sources */,
+				2BFFCF281E3B816600AE5AD5 /* Person.swift in Sources */,
 				2B848AF71E262F2500059934 /* AppDelegate.swift in Sources */,
 				2B221E061E290D7C00E21271 /* Product.swift in Sources */,
 			);

@@ -53,7 +53,7 @@
 
 @property (nonatomic, assign, readonly) ASTextKitAttributes attributes;
 
-@property (nonatomic, assign, readwrite) CGSize constrainedSize;
+@property (nonatomic, assign, readonly) CGSize constrainedSize;
 
 @property (nonatomic, assign, readonly) CGFloat currentScaleFactor;
 
@@ -84,6 +84,11 @@
  The number of lines shown in the string.
  */
 - (NSUInteger)lineCount;
+
+/**
+ Whether or not the text is truncated.
+ */
+- (BOOL)isTruncated;
 
 @end
 

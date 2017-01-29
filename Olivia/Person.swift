@@ -8,9 +8,10 @@
 
 import Foundation
 
-class Person {
+struct Person {
     var thumbUrl: String?
     var name: String?
     var followers: Int?
     var followings: Int?
+    var products: [Product]?
 }

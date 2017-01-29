@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     var stack: StackTest?
     
     let user: Person = {
-        let person = Person()
+        var person = Person()
         person.name = "Olivia Zimmerman"
         person.followers = 340
         person.followings = 172

@@ -43,7 +43,7 @@ class StackTest: ASDisplayNode {
         
         author.attributedText = NSAttributedString(string: person.name!, attributes: [NSFontAttributeName: UIFont(name: "perfectlyamicable", size: 35)!, NSForegroundColorAttributeName: UIColor(red:0.71, green:0.52, blue:0.36, alpha:1.00), NSParagraphStyleAttributeName: paragraphStyle])
         
-        thumbnail.url = URL(string: "https://avatars3.githubusercontent.com/u/4906243?v=3&s=460")
+        thumbnail.url = URL(string: avatar)
         thumbnail.contentMode = .scaleAspectFill
         
         followers.attributedText = NSAttributedString(string: "\(person.followers!)'ers", attributes: [NSFontAttributeName: UIFont(name: "perfectlyamicable", size: 20)!, NSForegroundColorAttributeName: UIColor.white])
@@ -54,7 +54,6 @@ class StackTest: ASDisplayNode {
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        
         nodeConfiguration(with: constrainedSize)
        
         let mainStack = ASStackLayoutSpec.vertical()
@@ -70,11 +69,8 @@ class StackTest: ASDisplayNode {
     
     func nodeConfiguration(with constrainedSize: ASSizeRange) {
         let width = constrainedSize.max.width
-
-        
         segmentController.style.preferredSize = CGSize(width: width, height: 45)
         segmentController.backgroundColor = UIColor.red
-        
         thumbnail.style.preferredSize = CGSize(width: width / 4, height: width / 4)
         thumbnail.cornerRadius = thumbnail.style.preferredSize.width / 2
         thumbnail.clipsToBounds = true
@@ -104,7 +100,6 @@ class StackTest: ASDisplayNode {
         firstStack.children = [thumbnail, infoStack]
         
         let firstStackInsets = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10,left: 30,bottom: 10,right: 30), child: firstStack)
-        
         return firstStackInsets
     }
     
@@ -114,9 +109,7 @@ class StackTest: ASDisplayNode {
         segmentStack.justifyContent = .start
         segmentStack.alignItems = .start
         segmentStack.children = [segmentController]
-        
         let segmentStackInsets = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 20,left: 0,bottom: 0,right: 0), child: segmentStack)
-        
         return segmentStackInsets
     }
 }

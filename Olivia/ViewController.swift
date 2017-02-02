@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     let user: Person = {
         var person = Person()
-        person.name = "Olivia Zimmerhlkjhlkjhlkjhlkjhlkjhlkjhkman"
+        person.name = "Olivia Zimmerman"
         person.followers = 340
         person.followings = 172
         return person
@@ -29,18 +29,15 @@ class ViewController: UIViewController {
         let boundsSize = UIScreen.main.bounds.size
         let size = ASSizeRange(min: boundsSize, max: boundsSize)
         stack?.layoutThatFits(size)
+        stack?.backgroundColor = UIColor.green
         self.view.addSubnode(stack!)
     }
     
     //FIXME: - fix unwrapping
     override func viewDidLayoutSubviews() {
-        let size = self.stack?.layoutThatFits(ASSizeRange(min: CGSize.zero, max: self.view.frame.size)).size
-        
-        let yOffset: CGFloat = size!.width < size!.height ? 20 : 0
-        
-        print(yOffset)
-        
-        self.stack?.frame = CGRect(x: 0.0, y: yOffset, width: (size?.width)!, height: (size?.height)!)
+        let width = self.view.frame.size.width < self.view.frame.size.height ? self.view.frame.size : CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height)
+        //let size = self.stack?.layoutThatFits(ASSizeRange(min: CGSize.zero, max: width)).size
+        self.stack?.frame = CGRect(origin: CGPoint(x: 0.0, y: 0.0), size: width)
     }
 }
 

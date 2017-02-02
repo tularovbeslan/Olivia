@@ -11,7 +11,7 @@ import AsyncDisplayKit
 class StackTest: ASDisplayNode {
     
     var thumbnail = ASNetworkImageNode()
-    
+    var dataProvider: PagerNodeDataProvider!
     var author: ASTextNode = {
         let textNode = ASTextNode()
         textNode.style.flexShrink = 1.0
@@ -32,13 +32,18 @@ class StackTest: ASDisplayNode {
     }()
     
     let segmentController = ASDisplayNode()
-    let pageNode = ASPagerNode()
+    let pagerNode = ASPagerNode()
     
     convenience init(person: Person) {
         self.init()
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 0.8
+        
+        dataProvider = PagerNodeDataProvider()
+        dataProvider.pagerNode = pagerNode
+        pagerNode.setDataSource(dataProvider)
+        
         
         segmentController.backgroundColor = UIColor.red
         
@@ -59,23 +64,26 @@ class StackTest: ASDisplayNode {
         nodeConfiguration(with: constrainedSize)
        
         let mainStack = constrainedSize.max.width < constrainedSize.max.height ? ASStackLayoutSpec.vertical() : ASStackLayoutSpec.horizontal()
-        mainStack.justifyContent = .start
-        mainStack.alignItems = .start
-        mainStack.spacing = 20
-        mainStack.style.preferredSize = UIScreen.main.bounds.size
-        mainStack.children = [headerStack(with: constrainedSize), footerStack()]
+        mainStack.justifyContent    = .spaceAround
+        mainStack.alignItems        = .center
+        mainStack.spacing           = 0
+        mainStack.children          = [headerStack(with: constrainedSize), footerStack()]
         
-        let mainInsets = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10,left: 10,bottom: 10,right: 10), child: mainStack)
-        return mainInsets
+        return mainStack
     }
     
     func nodeConfiguration(with constrainedSize: ASSizeRange) {
-        let width = constrainedSize.max.width < constrainedSize.max.height ? constrainedSize.max.width : constrainedSize.max.height
-        segmentController.style.preferredSize = CGSize(width: width, height: 45)
-        segmentController.backgroundColor = UIColor.red
-        thumbnail.style.preferredSize = CGSize(width: width / 4, height: width / 4)
-        thumbnail.cornerRadius = thumbnail.style.preferredSize.width / 2
-        thumbnail.clipsToBounds = true
+        let thumbnailWidth = constrainedSize.max.width < constrainedSize.max.height ? constrainedSize.max.width : constrainedSize.max.height
+        let width = constrainedSize.max.width < constrainedSize.max.height ? constrainedSize.max.width : constrainedSize.max.height + 80
+        let height = constrainedSize.max.width < constrainedSize.max.height ? width + 80 : width
+
+        segmentController.style.preferredSize   = CGSize(width: width, height: 55)
+        segmentController.backgroundColor       = UIColor.red
+        pagerNode.style.preferredSize           = CGSize(width: width, height: height)
+        pagerNode.backgroundColor               = UIColor.blue
+        thumbnail.style.preferredSize           = CGSize(width: thumbnailWidth / 4, height: thumbnailWidth / 4)
+        thumbnail.cornerRadius                  = thumbnail.style.preferredSize.width / 2
+        thumbnail.clipsToBounds                 = true
     }
     
     func headerStack(with constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -83,27 +91,27 @@ class StackTest: ASDisplayNode {
         let width = constrainedSize.max.width < constrainedSize.max.height ? constrainedSize.max.width : constrainedSize.max.height
 
         let activityStack = ASStackLayoutSpec.horizontal()
-        activityStack.style.flexShrink = 1.0
-        activityStack.spacing = 30
-        activityStack.justifyContent = .start
-        activityStack.alignItems = .start
-        activityStack.children = [followers, following]
+        activityStack.style.flexShrink  = 1.0
+        activityStack.spacing           = 30
+        activityStack.justifyContent    = .start
+        activityStack.alignItems        = .start
+        activityStack.children          = [followers, following]
         
         let activityStackInsets = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10,left: 0,bottom: 0,right: 0), child: activityStack)
         
         let infoStack = ASStackLayoutSpec.vertical()
-        infoStack.style.flexShrink = 1.0
-        infoStack.justifyContent = .start
-        infoStack.alignItems = .start
-        infoStack.children = [author, activityStackInsets]
+        infoStack.style.flexShrink  = 1.0
+        infoStack.justifyContent    = .start
+        infoStack.alignItems        = .start
+        infoStack.children          = [author, activityStackInsets]
         
         let firstStack = constrainedSize.max.width > constrainedSize.max.height ? ASStackLayoutSpec.vertical() : ASStackLayoutSpec.horizontal()
         firstStack.style.flexShrink = 1.0
-        firstStack.style.maxWidth = ASDimensionMake(width - 100)
-        firstStack.justifyContent = .start
-        firstStack.alignItems = .center
-        firstStack.spacing = 20
-        firstStack.children = [thumbnail, infoStack]
+        firstStack.style.maxWidth   = ASDimensionMake(width - 80)
+        firstStack.justifyContent   = .center
+        firstStack.alignItems       = .center
+        firstStack.spacing          = 20
+        firstStack.children         = [thumbnail, infoStack]
         
         let firstStackInsets = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10,left: 30,bottom: 10,right: 30), child: firstStack)
         return firstStackInsets
@@ -111,10 +119,10 @@ class StackTest: ASDisplayNode {
     
     func footerStack() -> ASLayoutSpec {
         let segmentStack = ASStackLayoutSpec.vertical()
-        segmentStack.style.flexShrink = 1.0
-        segmentStack.justifyContent = .start
-        segmentStack.alignItems = .start
-        segmentStack.children = [segmentController]
+        segmentStack.style.flexShrink   = 1.0
+        segmentStack.justifyContent     = .start
+        segmentStack.alignItems         = .start
+        segmentStack.children           = [segmentController, pagerNode]
         return segmentStack
     }
 }

@@ -15,6 +15,7 @@
 		2B848B0C1E262F2500059934 /* OliviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B848B0B1E262F2500059934 /* OliviaTests.swift */; };
 		2B848B171E262F2500059934 /* OliviaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B848B161E262F2500059934 /* OliviaUITests.swift */; };
 		2B989F011E291CF100108049 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B989F001E291CF100108049 /* API.swift */; };
+		2BB8A5B31E432C19008FB750 /* PagerNodeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB8A5B21E432C19008FB750 /* PagerNodeDataProvider.swift */; };
 		2BDE66571E3EAC88001DA3A6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE66561E3EAC88001DA3A6 /* Product.swift */; };
 		2BDE665C1E3EB3AB001DA3A6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE665B1E3EB3AB001DA3A6 /* DataManager.swift */; };
 		2BFFCF261E3B804800AE5AD5 /* StackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFFCF251E3B804800AE5AD5 /* StackTest.swift */; };
@@ -54,6 +55,7 @@
 		2B848B161E262F2500059934 /* OliviaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OliviaUITests.swift; sourceTree = "<group>"; };
 		2B848B181E262F2500059934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B989F001E291CF100108049 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2BB8A5B21E432C19008FB750 /* PagerNodeDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerNodeDataProvider.swift; sourceTree = "<group>"; };
 		2BDE66561E3EAC88001DA3A6 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		2BDE665B1E3EB3AB001DA3A6 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		2BFFCF251E3B804800AE5AD5 /* StackTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTest.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				2BDE665B1E3EB3AB001DA3A6 /* DataManager.swift */,
+				2BB8A5B21E432C19008FB750 /* PagerNodeDataProvider.swift */,
 				2BFFCF271E3B816600AE5AD5 /* Person.swift */,
 				2BDE66561E3EAC88001DA3A6 /* Product.swift */,
 			);
@@ -382,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BB8A5B31E432C19008FB750 /* PagerNodeDataProvider.swift in Sources */,
 				2B989F011E291CF100108049 /* API.swift in Sources */,
 				2BDE66571E3EAC88001DA3A6 /* Product.swift in Sources */,
 				2BFFCF261E3B804800AE5AD5 /* StackTest.swift in Sources */,

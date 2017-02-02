@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     let user: Person = {
         var person = Person()
-        person.name = "Olivia Zimmerman"
+        person.name = "Olivia Zimmerhlkjhlkjhlkjhlkjhlkjhlkjhkman"
         person.followers = 340
         person.followings = 172
         return person
@@ -32,9 +32,15 @@ class ViewController: UIViewController {
         self.view.addSubnode(stack!)
     }
     
+    //FIXME: - fix unwrapping
     override func viewDidLayoutSubviews() {
         let size = self.stack?.layoutThatFits(ASSizeRange(min: CGSize.zero, max: self.view.frame.size)).size
-        self.stack?.frame = CGRect(x: 0.0, y: 20.0, width: (size?.width)!, height: (size?.height)!)
+        
+        let yOffset: CGFloat = size!.width < size!.height ? 20 : 0
+        
+        print(yOffset)
+        
+        self.stack?.frame = CGRect(x: 0.0, y: yOffset, width: (size?.width)!, height: (size?.height)!)
     }
 }
 

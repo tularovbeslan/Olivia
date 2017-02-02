@@ -15,6 +15,7 @@ class StackTest: ASDisplayNode {
     var author: ASTextNode = {
         let textNode = ASTextNode()
         textNode.style.flexShrink = 1.0
+        textNode.maximumNumberOfLines = 3
         return textNode
     }()
     
@@ -54,21 +55,22 @@ class StackTest: ASDisplayNode {
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        
         nodeConfiguration(with: constrainedSize)
        
-        let mainStack = ASStackLayoutSpec.vertical()
+        let mainStack = constrainedSize.max.width < constrainedSize.max.height ? ASStackLayoutSpec.vertical() : ASStackLayoutSpec.horizontal()
         mainStack.justifyContent = .start
         mainStack.alignItems = .start
         mainStack.spacing = 20
         mainStack.style.preferredSize = UIScreen.main.bounds.size
-        mainStack.children = [headerStack(), footerStack()]
+        mainStack.children = [headerStack(with: constrainedSize), footerStack()]
         
         let mainInsets = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10,left: 10,bottom: 10,right: 10), child: mainStack)
         return mainInsets
     }
     
     func nodeConfiguration(with constrainedSize: ASSizeRange) {
-        let width = constrainedSize.max.width
+        let width = constrainedSize.max.width < constrainedSize.max.height ? constrainedSize.max.width : constrainedSize.max.height
         segmentController.style.preferredSize = CGSize(width: width, height: 45)
         segmentController.backgroundColor = UIColor.red
         thumbnail.style.preferredSize = CGSize(width: width / 4, height: width / 4)
@@ -76,7 +78,10 @@ class StackTest: ASDisplayNode {
         thumbnail.clipsToBounds = true
     }
     
-    func headerStack() -> ASLayoutSpec {
+    func headerStack(with constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        
+        let width = constrainedSize.max.width < constrainedSize.max.height ? constrainedSize.max.width : constrainedSize.max.height
+
         let activityStack = ASStackLayoutSpec.horizontal()
         activityStack.style.flexShrink = 1.0
         activityStack.spacing = 30
@@ -92,8 +97,9 @@ class StackTest: ASDisplayNode {
         infoStack.alignItems = .start
         infoStack.children = [author, activityStackInsets]
         
-        let firstStack = ASStackLayoutSpec.horizontal()
+        let firstStack = constrainedSize.max.width > constrainedSize.max.height ? ASStackLayoutSpec.vertical() : ASStackLayoutSpec.horizontal()
         firstStack.style.flexShrink = 1.0
+        firstStack.style.maxWidth = ASDimensionMake(width - 100)
         firstStack.justifyContent = .start
         firstStack.alignItems = .center
         firstStack.spacing = 20
@@ -109,7 +115,6 @@ class StackTest: ASDisplayNode {
         segmentStack.justifyContent = .start
         segmentStack.alignItems = .start
         segmentStack.children = [segmentController]
-        let segmentStackInsets = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 20,left: 0,bottom: 0,right: 0), child: segmentStack)
-        return segmentStackInsets
+        return segmentStack
     }
 }

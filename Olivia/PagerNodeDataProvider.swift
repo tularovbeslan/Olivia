@@ -16,12 +16,14 @@ class PagerNodeDataProvider: NSObject {
 
 extension PagerNodeDataProvider: ASPagerDataSource {
     func numberOfPages(in pagerNode: ASPagerNode) -> Int {
-        return 0
+        return 5
     }
     
     func pagerNode(_ pagerNode: ASPagerNode, nodeBlockAt index: Int) -> ASCellNodeBlock {
         let cellNodeBlock = { () -> ASCellNode in
             let cellNode = ASCellNode()
+            cellNode.borderWidth = 3
+            cellNode.borderColor = UIColor.black.cgColor
             return cellNode
         }
         return cellNodeBlock

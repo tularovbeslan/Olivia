@@ -12,18 +12,22 @@ import AsyncDisplayKit
 class PagerNodeDataProvider: NSObject {
     var products: [Product]?
     weak var pagerNode: ASPagerNode?
+    
+    convenience init(with products: [Product]?) {
+        self.init()
+        self.products = products
+    }
 }
 
 extension PagerNodeDataProvider: ASPagerDataSource {
     func numberOfPages(in pagerNode: ASPagerNode) -> Int {
-        return 5
+        return products?.count ?? 0
     }
     
     func pagerNode(_ pagerNode: ASPagerNode, nodeBlockAt index: Int) -> ASCellNodeBlock {
+        let product = products![index]
         let cellNodeBlock = { () -> ASCellNode in
-            let cellNode = ASCellNode()
-            cellNode.borderWidth = 3
-            cellNode.borderColor = UIColor.black.cgColor
+            let cellNode = PagerCellNode(with: product)
             return cellNode
         }
         return cellNodeBlock

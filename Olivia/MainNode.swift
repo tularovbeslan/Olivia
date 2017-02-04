@@ -8,14 +8,15 @@
 
 import UIKit
 import AsyncDisplayKit
-class StackTest: ASDisplayNode {
+class MainNode: ASDisplayNode {
     
     var thumbnail = ASNetworkImageNode()
     var dataProvider: PagerNodeDataProvider!
+    
     var author: ASTextNode = {
         let textNode = ASTextNode()
         textNode.style.flexShrink = 1.0
-        textNode.maximumNumberOfLines = 3
+        textNode.maximumNumberOfLines = 2
         return textNode
     }()
     
@@ -34,18 +35,22 @@ class StackTest: ASDisplayNode {
     let segmentController = ASDisplayNode()
     let pagerNode = ASPagerNode()
     
-    convenience init(person: Person) {
+    convenience init(data: Person?) {
         self.init()
+        
+        guard let person = data else { return }
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 0.8
         
-        dataProvider = PagerNodeDataProvider()
+        
+        
+        dataProvider = PagerNodeDataProvider(with: person.products)
         dataProvider.pagerNode = pagerNode
         pagerNode.setDataSource(dataProvider)
         
-        
         segmentController.backgroundColor = UIColor.red
+        
         
         author.attributedText = NSAttributedString(string: person.name!, attributes: [NSFontAttributeName: UIFont(name: "perfectlyamicable", size: 35)!, NSForegroundColorAttributeName: UIColor(red:0.71, green:0.52, blue:0.36, alpha:1.00), NSParagraphStyleAttributeName: paragraphStyle])
         
@@ -74,13 +79,13 @@ class StackTest: ASDisplayNode {
     
     func nodeConfiguration(with constrainedSize: ASSizeRange) {
         let thumbnailWidth = constrainedSize.max.width < constrainedSize.max.height ? constrainedSize.max.width : constrainedSize.max.height
-        let width = constrainedSize.max.width < constrainedSize.max.height ? constrainedSize.max.width : constrainedSize.max.height + 80
-        let height = constrainedSize.max.width < constrainedSize.max.height ? width + 80 : width
+        let width = constrainedSize.max.width < constrainedSize.max.height ? constrainedSize.max.width : constrainedSize.max.width - 150
+        let height = constrainedSize.max.width < constrainedSize.max.height ? constrainedSize.max.height - 150: constrainedSize.max.height - 44
 
-        segmentController.style.preferredSize   = CGSize(width: width, height: 55)
+        segmentController.style.preferredSize   = CGSize(width: width, height: 44)
         segmentController.backgroundColor       = UIColor.red
         pagerNode.style.preferredSize           = CGSize(width: width, height: height)
-        pagerNode.backgroundColor               = UIColor.blue
+        pagerNode.backgroundColor               = UIColor(red:0.13, green:0.13, blue:0.12, alpha:1.00)
         thumbnail.style.preferredSize           = CGSize(width: thumbnailWidth / 4, height: thumbnailWidth / 4)
         thumbnail.cornerRadius                  = thumbnail.style.preferredSize.width / 2
         thumbnail.clipsToBounds                 = true
@@ -105,24 +110,24 @@ class StackTest: ASDisplayNode {
         infoStack.alignItems        = .start
         infoStack.children          = [author, activityStackInsets]
         
-        let firstStack = constrainedSize.max.width > constrainedSize.max.height ? ASStackLayoutSpec.vertical() : ASStackLayoutSpec.horizontal()
-        firstStack.style.flexShrink = 1.0
-        firstStack.style.maxWidth   = ASDimensionMake(width - 80)
-        firstStack.justifyContent   = .center
-        firstStack.alignItems       = .center
-        firstStack.spacing          = 20
-        firstStack.children         = [thumbnail, infoStack]
+        let headerStack = constrainedSize.max.width > constrainedSize.max.height ? ASStackLayoutSpec.vertical() : ASStackLayoutSpec.horizontal()
+        headerStack.style.flexShrink = 1.0
+        headerStack.style.maxWidth   = ASDimensionMake(width - 80)
+        headerStack.justifyContent   = .center
+        headerStack.alignItems       = .center
+        headerStack.spacing          = 20
+        headerStack.children         = [thumbnail, infoStack]
         
-        let firstStackInsets = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10,left: 30,bottom: 10,right: 30), child: firstStack)
+        let firstStackInsets = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10,left: 30,bottom: 10,right: 30), child: headerStack)
         return firstStackInsets
     }
     
     func footerStack() -> ASLayoutSpec {
-        let segmentStack = ASStackLayoutSpec.vertical()
-        segmentStack.style.flexShrink   = 1.0
-        segmentStack.justifyContent     = .start
-        segmentStack.alignItems         = .start
-        segmentStack.children           = [segmentController, pagerNode]
-        return segmentStack
+        let footerStack = ASStackLayoutSpec.vertical()
+        footerStack.style.flexShrink   = 1.0
+        footerStack.justifyContent     = .start
+        footerStack.alignItems         = .start
+        footerStack.children           = [segmentController, pagerNode]
+        return footerStack
     }
 }

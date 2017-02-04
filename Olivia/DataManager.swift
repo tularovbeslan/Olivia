@@ -10,7 +10,7 @@ import Foundation
 
 class DataManager: NSObject {
     
-    let products: [[String: Any]] = [["thumbnail": "https://s-media-cache-ak0.pinimg.com/564x/c0/6e/b9/c06eb987bdda5e0cc315d3c93f5a364d.jpg", "title":"Strawberry vanilla", "likes": 34, "comments": 67, "favourite": 23],["thumbnail": "https://s-media-cache-ak0.pinimg.com/236x/86/56/c5/8656c55f047063735087445bf17653bd.jpg", "title":"Green juice with ginger", "likes": 326, "comments": 425, "favourite": 12],["thumbnail": "https://s-media-cache-ak0.pinimg.com/564x/2a/83/a5/2a83a57cd7aaad6e9fc54a715b7e4152.jpg", "title":"Grilled octopus", "likes": 63, "comments": 57, "favourite": 62]]
+    let data: [[String: Any]] = [["thumbnail": "https://s-media-cache-ak0.pinimg.com/564x/c0/6e/b9/c06eb987bdda5e0cc315d3c93f5a364d.jpg", "title":"Strawberry vanilla", "likes": 34, "comments": 67, "favourite": 23],["thumbnail": "https://s-media-cache-ak0.pinimg.com/236x/86/56/c5/8656c55f047063735087445bf17653bd.jpg", "title":"Green juice with ginger", "likes": 326, "comments": 425, "favourite": 12],["thumbnail": "https://s-media-cache-ak0.pinimg.com/564x/2a/83/a5/2a83a57cd7aaad6e9fc54a715b7e4152.jpg", "title":"Grilled octopus", "likes": 63, "comments": 57, "favourite": 62]]
     
     func getPerson() -> Person {
         var person = Person()
@@ -22,12 +22,18 @@ class DataManager: NSObject {
         return person
     }
     
-    func getProducts() -> [Product] {
-        let products = [Product]()
-        for product in 0..<products.count {
-            print(product)
+    func getProducts() -> [Product]? {
+        var products = [Product]()
+        for (_, value) in data.enumerated() {
+            
+            guard let thumbnail = value["thumbnail"] as? String, let title = value["title"] as? String, let likes = value["likes"] as? Int, let comments = value["comments"] as? Int, let favourite = value["favourite"] as? Int else {
+                return nil
+            }
+            
+            let url = URL(string: thumbnail)
+            let product = Product(thumbnail: url, title: title, likes: likes, comments: comments, favourite: favourite)
+            products.append(product)
         }
         return products
     }
-    
 }

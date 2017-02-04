@@ -16,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: ViewController())
+        
+        let dataManager = DataManager()
+        let vc = ViewController()
+        vc.user = dataManager.getPerson()
+        window?.rootViewController = UINavigationController(rootViewController: vc)
         navigationBarConfigure()
         return true
     }

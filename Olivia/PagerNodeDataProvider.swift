@@ -6,13 +6,13 @@
 //  Copyright © 2017 BESLAN TULAROV. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import AsyncDisplayKit
 
 class PagerNodeDataProvider: NSObject {
     var products: [Product]?
     weak var pagerNode: ASPagerNode?
-    
+    let OffsetSpeed: CGFloat = 25.0
     convenience init(with products: [Product]?) {
         self.init()
         self.products = products
@@ -31,5 +31,18 @@ extension PagerNodeDataProvider: ASPagerDataSource {
             return cellNode
         }
         return cellNodeBlock
+    }
+}
+
+extension PagerNodeDataProvider: ASPagerDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+       let progress = scrollView.contentOffset.x / (scrollView.contentSize.width - scrollView.bounds.size.width)
+        
+        let visibleNodes = pagerNode!.visibleNodes as! [PagerCellNode]
+        print(scrollView.contentOffset.x / 3)
+        
+        for paralaxNode in visibleNodes {
+            paralaxNode.offset(CGPoint(x: progress * 100, y: 0.0))
+        }
     }
 }

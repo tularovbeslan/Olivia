@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     var stack: MainNode?
     var user: Person?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "OLIVIA"

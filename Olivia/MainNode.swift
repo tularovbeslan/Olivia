@@ -42,16 +42,12 @@ class MainNode: ASDisplayNode {
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 0.8
-        
-        
-        
         dataProvider = PagerNodeDataProvider(with: person.products)
         dataProvider.pagerNode = pagerNode
         pagerNode.setDataSource(dataProvider)
-        
+        pagerNode.setDelegate(dataProvider)
         segmentController.backgroundColor = UIColor.red
-        
-        
+
         author.attributedText = NSAttributedString(string: person.name!, attributes: [NSFontAttributeName: UIFont(name: "perfectlyamicable", size: 35)!, NSForegroundColorAttributeName: UIColor(red:0.71, green:0.52, blue:0.36, alpha:1.00), NSParagraphStyleAttributeName: paragraphStyle])
         
         thumbnail.url = URL(string: avatar)
@@ -65,7 +61,6 @@ class MainNode: ASDisplayNode {
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        
         nodeConfiguration(with: constrainedSize)
        
         let mainStack = constrainedSize.max.width < constrainedSize.max.height ? ASStackLayoutSpec.vertical() : ASStackLayoutSpec.horizontal()
@@ -73,7 +68,6 @@ class MainNode: ASDisplayNode {
         mainStack.alignItems        = .center
         mainStack.spacing           = 0
         mainStack.children          = [headerStack(with: constrainedSize), footerStack()]
-        
         return mainStack
     }
     

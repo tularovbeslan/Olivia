@@ -14,7 +14,6 @@ class PagerCellNode: ASCellNode {
     let thumbnail: ASNetworkImageNode = {
         let image = ASNetworkImageNode()
         image.contentMode = .scaleAspectFill
-        image.clipsToBounds = false
         return image
     }()
     
@@ -28,8 +27,12 @@ class PagerCellNode: ASCellNode {
         self.init()
         
         thumbnail.url = product.thumbnail
+        
+
         title.attributedText = NSAttributedString(string: product.title!, attributes: [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont.systemFont(ofSize: 25)])
-        self.automaticallyManagesSubnodes = true
+        
+        self.addSubnode(thumbnail)
+        self.addSubnode(title)
         //FIXME: - Need fix -
         self.backgroundColor = UIColor.blue
     }
@@ -37,13 +40,11 @@ class PagerCellNode: ASCellNode {
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let width = constrainedSize.max.width
         let height = constrainedSize.max.height
-        thumbnail.style.preferredSize = CGSize(width: width, height: height)
-        
+        thumbnail.frame = CGRect(x: -100, y: 0, width: width + 200, height: height)
+
         let titleInsets = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 20,left: 20,bottom: CGFloat.infinity,right: CGFloat.infinity), child: title)
-        
-        let overlayStack = ASOverlayLayoutSpec(child: thumbnail, overlay: titleInsets)
-        overlayStack.style.flexShrink = 2
-        return overlayStack
+
+        return titleInsets
     }
     
     func offset(_ offset: CGPoint) {

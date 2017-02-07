@@ -20,6 +20,7 @@ class PagerCellNode: ASCellNode {
     let title: ASTextNode = {
         let textNode = ASTextNode()
         textNode.maximumNumberOfLines = 1
+        textNode.alpha = 0.0
         return textNode
     }()
     
@@ -33,6 +34,18 @@ class PagerCellNode: ASCellNode {
         
         self.addSubnode(thumbnail)
         self.addSubnode(title)
+    }
+    
+    override func didEnterVisibleState() {
+        UIView.animate(withDuration: 3) {
+            self.title.alpha = 1.0
+            self.title.view.transform = CGAffineTransform(translationX: 50, y: 20)
+        }
+    }
+    
+    override func didExitVisibleState() {
+            self.title.alpha = 0.0
+            self.title.view.transform = CGAffineTransform.identity
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -50,6 +63,8 @@ class PagerCellNode: ASCellNode {
     }
     
     func translation(_ offset: CGPoint) {
-        title.transform = CATransform3DMakeScale(offset.x / 20, offset.x / 20, 0)
+        //title.frame = self.title.frame.offsetBy(dx: offset.x / 2, dy: 0)
     }
+    
+    
 }

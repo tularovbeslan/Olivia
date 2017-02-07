@@ -12,7 +12,6 @@ import AsyncDisplayKit
 class PagerNodeDataProvider: NSObject {
     var products: [Product]?
     weak var pagerNode: ASPagerNode?
-    let OffsetSpeed: CGFloat = 25.0
     convenience init(with products: [Product]?) {
         self.init()
         self.products = products
@@ -40,8 +39,9 @@ extension PagerNodeDataProvider: ASPagerDelegate {
         let visibleNodes = pagerNode!.visibleNodes as! [PagerCellNode]
         for paralaxNode in visibleNodes {
             print("current cell = \(pagerNode!.currentPageIndex)")
+            let currentNode = pagerNode!.nodeForPage(at: pagerNode!.currentPageIndex) as! PagerCellNode
             paralaxNode.offset(CGPoint(x: progress * 100 - 100, y: 0.0))
-            paralaxNode.translation(CGPoint(x: progress * 100 + 20, y: 20.0))
+            currentNode.translation(CGPoint(x: progress * 100 + 20, y: 20.0))
         }
     }
 }

@@ -36,12 +36,15 @@ extension PagerNodeDataProvider: ASPagerDataSource {
 extension PagerNodeDataProvider: ASPagerDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let progress = scrollView.contentOffset.x / (scrollView.contentSize.width - scrollView.bounds.size.width)
+        
+        let currentX = CGFloat(scrollView.contentOffset.x - (CGFloat(pagerNode!.currentPageIndex) * scrollView.bounds.size.width))
+        
         let visibleNodes = pagerNode!.visibleNodes as! [PagerCellNode]
         for paralaxNode in visibleNodes {
-            print("current cell = \(pagerNode!.currentPageIndex)")
             let currentNode = pagerNode!.nodeForPage(at: pagerNode!.currentPageIndex) as! PagerCellNode
             paralaxNode.offset(CGPoint(x: progress * 100 - 100, y: 0.0))
-            currentNode.translation(CGPoint(x: progress * 100 + 20, y: 20.0))
+            currentNode.translation(CGPoint(x: currentX / 2 + 20, y: 20.0))
+            
         }
     }
 }

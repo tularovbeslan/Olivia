@@ -37,15 +37,13 @@ class PagerCellNode: ASCellNode {
     }
     
     override func didEnterVisibleState() {
-        UIView.animate(withDuration: 3) {
+        UIView.animate(withDuration: 1, delay: 0.0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
             self.title.alpha = 1.0
-            self.title.view.transform = CGAffineTransform(translationX: 50, y: 20)
-        }
+        }, completion: nil)
     }
     
     override func didExitVisibleState() {
             self.title.alpha = 0.0
-            self.title.view.transform = CGAffineTransform.identity
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -63,7 +61,7 @@ class PagerCellNode: ASCellNode {
     }
     
     func translation(_ offset: CGPoint) {
-        //title.frame = self.title.frame.offsetBy(dx: offset.x / 2, dy: 0)
+        title.frame.origin.x = offset.x
     }
     
     

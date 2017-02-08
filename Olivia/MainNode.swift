@@ -46,7 +46,6 @@ class MainNode: ASDisplayNode {
         dataProvider.pagerNode = pagerNode
         pagerNode.setDataSource(dataProvider)
         pagerNode.setDelegate(dataProvider)
-        segmentController.backgroundColor = UIColor.red
 
         author.attributedText = NSAttributedString(string: person.name!, attributes: [NSFontAttributeName: UIFont(name: "perfectlyamicable", size: 35)!, NSForegroundColorAttributeName: UIColor(red:0.71, green:0.52, blue:0.36, alpha:1.00), NSParagraphStyleAttributeName: paragraphStyle])
         
@@ -77,7 +76,7 @@ class MainNode: ASDisplayNode {
         let height = constrainedSize.max.width < constrainedSize.max.height ? constrainedSize.max.height - 150: constrainedSize.max.height - 44
 
         segmentController.style.preferredSize   = CGSize(width: width, height: 44)
-        segmentController.backgroundColor       = UIColor.red
+        segmentController.backgroundColor       = UIColor(red:0.13, green:0.13, blue:0.12, alpha:1.00)
         pagerNode.style.preferredSize           = CGSize(width: width, height: height)
         pagerNode.backgroundColor               = UIColor(red:0.13, green:0.13, blue:0.12, alpha:1.00)
         thumbnail.style.preferredSize           = CGSize(width: thumbnailWidth / 4, height: thumbnailWidth / 4)

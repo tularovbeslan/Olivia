@@ -43,7 +43,7 @@ extension PagerNodeDataProvider: ASPagerDelegate {
         for paralaxNode in visibleNodes {
             let currentNode = pagerNode!.nodeForPage(at: pagerNode!.currentPageIndex) as! PagerCellNode
             paralaxNode.offset(CGPoint(x: progress * 100 - 100, y: 0.0))
-            currentNode.translation(CGPoint(x: currentX / 2 + 20, y: 20.0))
+            currentNode.translation(CGPoint(x: currentX, y: 20.0))
             
         }
     }

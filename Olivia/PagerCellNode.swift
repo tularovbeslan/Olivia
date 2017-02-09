@@ -11,6 +11,8 @@ import AsyncDisplayKit
 
 class PagerCellNode: ASCellNode {
     
+    var stack = ASStackLayoutSpec()
+    
     let thumbnail: ASNetworkImageNode = {
         let image = ASNetworkImageNode()
         image.contentMode = .scaleAspectFill
@@ -20,6 +22,7 @@ class PagerCellNode: ASCellNode {
     let title: ASTextNode = {
         let textNode = ASTextNode()
         textNode.alpha = 0.0
+        textNode.style.flexShrink = 1
         return textNode
     }()
     
@@ -38,6 +41,28 @@ class PagerCellNode: ASCellNode {
         return textNode
     }()
     
+    let likesImage: ASImageNode = {
+        let imageNode = ASImageNode()
+        imageNode.frame.size = CGSize(width: 15, height: 15)
+        imageNode.image = UIImage(named: "Heart")
+        imageNode.contentMode = .scaleAspectFit
+        return imageNode
+    }()
+    
+    let commentsImage: ASImageNode = {
+        let imageNode = ASImageNode()
+        imageNode.frame.size = CGSize(width: 15, height: 15)
+        imageNode.image = UIImage(named: "Comment")
+        return imageNode
+    }()
+    
+    let favouritesImage: ASImageNode = {
+        let imageNode = ASImageNode()
+        imageNode.frame.size = CGSize(width: 15, height: 15)
+        imageNode.image = UIImage(named: "Star")
+        return imageNode
+    }()
+    
     let gradient = ASDisplayNode { () -> CALayer in
         let colorTop = UIColor(red:0.13, green:0.13, blue:0.12, alpha:1.00).cgColor
         let colorBottom = UIColor.clear
@@ -54,16 +79,11 @@ class PagerCellNode: ASCellNode {
         thumbnail.url = product.thumbnail
         
         title.attributedText = NSAttributedString(string: product.title!, attributes: [NSFontAttributeName: UIFont(name: "perfectlyamicable", size: 45)!, NSForegroundColorAttributeName: UIColor.white])
-        likes.attributedText = NSAttributedString(string: "\(product.likes!)", attributes: [NSFontAttributeName: UIFont(name: "perfectlyamicable", size: 25)!, NSForegroundColorAttributeName: UIColor(red:0.71, green:0.52, blue:0.36, alpha:1.00)])
+        likes.attributedText = NSAttributedString(string: "\(product.likes!)", attributes: [NSFontAttributeName: UIFont(name: "perfectlyamicable", size: 20)!, NSForegroundColorAttributeName: UIColor(red:0.71, green:0.52, blue:0.36, alpha:1.00)])
         comments.attributedText = NSAttributedString(string: "\(product.comments!)", attributes: [NSFontAttributeName: UIFont(name: "perfectlyamicable", size: 25)!, NSForegroundColorAttributeName: UIColor(red:0.71, green:0.52, blue:0.36, alpha:1.00)])
         favourites.attributedText = NSAttributedString(string: "\(product.favourite!)", attributes: [NSFontAttributeName: UIFont(name: "perfectlyamicable", size: 25)!, NSForegroundColorAttributeName: UIColor(red:0.71, green:0.52, blue:0.36, alpha:1.00)])
         
-        self.addSubnode(thumbnail)
-        self.addSubnode(gradient)
-        self.addSubnode(title)
-        self.addSubnode(likes)
-        self.addSubnode(comments)
-        self.addSubnode(favourites)
+        addSubnodes()
     }
     
     override func didEnterVisibleState() {
@@ -82,14 +102,37 @@ class PagerCellNode: ASCellNode {
         let width = constrainedSize.max.width
         let height = constrainedSize.max.height
         thumbnail.frame = CGRect(x: -100, y: 0, width: width + 100, height: height)
-        
         gradient.style.preferredSize = CGSize(width: width, height: height)
+        
 
-        let titleInsets = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 20,left: 20,bottom: CGFloat.infinity,right: CGFloat.infinity), child: title)
+        
 
-        let overlayStack = ASOverlayLayoutSpec(child: gradient, overlay: titleInsets)
+        let mainStack = ASStackLayoutSpec.horizontal()
+        mainStack.spacing = 10
+        mainStack.justifyContent = .spaceBetween
+        mainStack.alignItems = .start
+        mainStack.children = [titleStack(), likeStack()]
+        
+        let mainStackInsets = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 20,left: 20,bottom: CGFloat.infinity,right: 10), child: mainStack)
+
+
+        let overlayStack = ASOverlayLayoutSpec(child: gradient, overlay: mainStackInsets)
         
         return overlayStack
+    }
+    
+    func titleStack() -> ASLayoutSpec {
+        let titleStack = ASStackLayoutSpec.horizontal()
+        titleStack.style.flexBasis = ASDimensionMakeWithFraction(0.7)
+        titleStack.children = [title]
+        return titleStack
+    }
+    
+    func likeStack() -> ASLayoutSpec {
+        stack = ASStackLayoutSpec.horizontal()
+        stack.spacing = 5
+        stack.children = [likes, likesImage]
+        return stack
     }
     
     func offset(_ offset: CGPoint) {
@@ -99,5 +142,17 @@ class PagerCellNode: ASCellNode {
     func translation(_ offset: CGPoint) {
         title.frame.origin.x = offset.x / 2 + 20
         title.alpha = 1.0 - offset.x / 100
+    }
+    
+    func addSubnodes() {
+        self.addSubnode(thumbnail)
+        self.addSubnode(gradient)
+        self.addSubnode(title)
+        self.addSubnode(likes)
+        self.addSubnode(comments)
+        self.addSubnode(favourites)
+        self.addSubnode(likesImage)
+        self.addSubnode(commentsImage)
+        self.addSubnode(favouritesImage)
     }
 }

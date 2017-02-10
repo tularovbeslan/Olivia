@@ -37,7 +37,6 @@ class MainNode: ASDisplayNode {
     
     convenience init(data: Person?) {
         self.init()
-        
         guard let person = data else { return }
         
         let paragraphStyle = NSMutableParagraphStyle()
@@ -46,16 +45,11 @@ class MainNode: ASDisplayNode {
         dataProvider.pagerNode = pagerNode
         pagerNode.setDataSource(dataProvider)
         pagerNode.setDelegate(dataProvider)
-
         author.attributedText = NSAttributedString(string: person.name!, attributes: [NSFontAttributeName: UIFont(name: "perfectlyamicable", size: 35)!, NSForegroundColorAttributeName: UIColor(red:0.71, green:0.52, blue:0.36, alpha:1.00), NSParagraphStyleAttributeName: paragraphStyle])
-        
         thumbnail.url = URL(string: avatar)
         thumbnail.contentMode = .scaleAspectFill
-        
         followers.attributedText = NSAttributedString(string: "\(person.followers!)'ers", attributes: [NSFontAttributeName: UIFont(name: "perfectlyamicable", size: 20)!, NSForegroundColorAttributeName: UIColor.white])
-        
         following.attributedText = NSAttributedString(string: "\(person.followings!)'ing", attributes: [NSFontAttributeName: UIFont(name: "perfectlyamicable", size: 20)!, NSForegroundColorAttributeName: UIColor.white])
-        
         self.automaticallyManagesSubnodes = true
     }
     

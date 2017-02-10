@@ -25,11 +25,9 @@ class DataManager: NSObject {
     func getProducts() -> [Product]? {
         var products = [Product]()
         for (_, value) in data.enumerated() {
-            
             guard let thumbnail = value["thumbnail"] as? String, let title = value["title"] as? String, let likes = value["likes"] as? Int, let comments = value["comments"] as? Int, let favourite = value["favourite"] as? Int else {
                 return nil
             }
-            
             let url = URL(string: thumbnail)
             let product = Product(thumbnail: url, title: title, likes: likes, comments: comments, favourite: favourite)
             products.append(product)

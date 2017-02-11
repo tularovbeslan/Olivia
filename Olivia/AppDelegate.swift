@@ -30,8 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         UINavigationBar.appearance().shadowImage    = UIImage()
         UINavigationBar.appearance().barTintColor   = UIColor(red:0.13, green:0.13, blue:0.12, alpha:1.00)
+        UINavigationBar.appearance().tintColor      = .white
         UINavigationBar.appearance().isTranslucent  = false
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 20)!]
     }
 }

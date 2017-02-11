@@ -38,6 +38,7 @@ class PagerCellNode: ASCellNode {
         return textNode
     }()
     
+    
     let likesImage: ASImageNode = {
         let imageNode = ASImageNode()
         imageNode.frame.size = CGSize(width: 15, height: 15)
@@ -83,6 +84,7 @@ class PagerCellNode: ASCellNode {
         likes.attributedText = NSAttributedString(string: "\(product.likes!)", attributes: [NSFontAttributeName: UIFont(name: "perfectlyamicable", size: 22)!, NSForegroundColorAttributeName: UIColor(red:0.71, green:0.52, blue:0.36, alpha:1.00), NSParagraphStyleAttributeName: paragraphStyle])
         comments.attributedText = NSAttributedString(string: "\(product.comments!)", attributes: [NSFontAttributeName: UIFont(name: "perfectlyamicable", size: 22)!, NSForegroundColorAttributeName: UIColor(red:0.71, green:0.52, blue:0.36, alpha:1.00), NSParagraphStyleAttributeName: paragraphStyle])
         favourites.attributedText = NSAttributedString(string: "\(product.favourite!)", attributes: [NSFontAttributeName: UIFont(name: "perfectlyamicable", size: 22)!, NSForegroundColorAttributeName: UIColor(red:0.71, green:0.52, blue:0.36, alpha:1.00), NSParagraphStyleAttributeName: paragraphStyle])
+        
         addSubnodes()
     }
     
@@ -149,6 +151,8 @@ class PagerCellNode: ASCellNode {
         mainStack.children = [likeStack, commentStack, favouriteStack]
         return mainStack
     }
+    
+    
     
     func offset(_ offset: CGPoint) {
         thumbnail.frame = self.thumbnail.bounds.offsetBy(dx: offset.x, dy: offset.y)

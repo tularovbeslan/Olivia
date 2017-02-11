@@ -10,7 +10,7 @@ import Foundation
 
 class DataManager: NSObject {
     
-    let data: [[String: Any]] = [["thumbnail": "https://s-media-cache-ak0.pinimg.com/564x/c0/6e/b9/c06eb987bdda5e0cc315d3c93f5a364d.jpg", "title":"Strawberry vanilla", "likes": 34, "comments": 67, "favourite": 23],["thumbnail": "http://www.fabuloussavers.com/new_wallpaper/painting_art_wallpaper_hd_desktop_download-1280x720.jpg", "title":"Green juice with ginger", "likes": 326, "comments": 425, "favourite": 12],["thumbnail": "https://s-media-cache-ak0.pinimg.com/564x/2a/83/a5/2a83a57cd7aaad6e9fc54a715b7e4152.jpg", "title":"Grilled octopus", "likes": 63, "comments": 57, "favourite": 62]]
+    let data: [[String: Any]] = [["thumbnail": "https://s-media-cache-ak0.pinimg.com/564x/c0/6e/b9/c06eb987bdda5e0cc315d3c93f5a364d.jpg", "title":"Strawberry Vanilla", "likes": 34, "comments": 67, "favourite": 23],["thumbnail": "http://www.fabuloussavers.com/new_wallpaper/painting_art_wallpaper_hd_desktop_download-1280x720.jpg", "title":"Green Juice with Ginger", "likes": 326, "comments": 425, "favourite": 12],["thumbnail": "https://s-media-cache-ak0.pinimg.com/564x/2a/83/a5/2a83a57cd7aaad6e9fc54a715b7e4152.jpg", "title":"Grilled Octopus", "likes": 63, "comments": 57, "favourite": 62]]
     
     func getPerson() -> Person {
         var person = Person()

@@ -8,7 +8,6 @@
 
 import UIKit
 import AsyncDisplayKit
-
 class PagerCellNode: ASCellNode {
     
     let thumbnail: ASNetworkImageNode = {
@@ -119,7 +118,7 @@ class PagerCellNode: ASCellNode {
     
     func titleStack() -> ASLayoutSpec {
         let titleStack = ASStackLayoutSpec.horizontal()
-        titleStack.style.flexBasis = ASDimensionMakeWithFraction(0.7)
+        titleStack.style.flexBasis = ASDimensionMakeWithFraction(0.6)
         titleStack.children = [title]
         return titleStack
     }
@@ -144,7 +143,7 @@ class PagerCellNode: ASCellNode {
         favouriteStack.children = [favourites, favouritesImage]
         
         let mainStack = ASStackLayoutSpec.vertical()
-        mainStack.spacing = 5
+        mainStack.spacing = 15
         mainStack.justifyContent = .start
         mainStack.alignItems = .end
         mainStack.children = [likeStack, commentStack, favouriteStack]

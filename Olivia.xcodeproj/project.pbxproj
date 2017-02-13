@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B332F7A1E450068009BA50A /* PagerCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B332F791E450068009BA50A /* PagerCellNode.swift */; };
+		2B4DE4151E3D48E5005FD3A2 /* perfectly amicable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B4DE4141E3D48E5005FD3A2 /* perfectly amicable.ttf */; };
 		2B848AF71E262F2500059934 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B848AF61E262F2500059934 /* AppDelegate.swift */; };
 		2B848AF91E262F2500059934 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B848AF81E262F2500059934 /* ViewController.swift */; };
-		2B848AFC1E262F2500059934 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B848AFA1E262F2500059934 /* Main.storyboard */; };
 		2B848AFE1E262F2500059934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B848AFD1E262F2500059934 /* Assets.xcassets */; };
 		2B848B011E262F2500059934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B848AFF1E262F2500059934 /* LaunchScreen.storyboard */; };
 		2B848B0C1E262F2500059934 /* OliviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B848B0B1E262F2500059934 /* OliviaTests.swift */; };
 		2B848B171E262F2500059934 /* OliviaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B848B161E262F2500059934 /* OliviaUITests.swift */; };
+		2B989F011E291CF100108049 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B989F001E291CF100108049 /* API.swift */; };
+		2BB8A5B31E432C19008FB750 /* PagerNodeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB8A5B21E432C19008FB750 /* PagerNodeDataProvider.swift */; };
+		2BDE66571E3EAC88001DA3A6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE66561E3EAC88001DA3A6 /* Product.swift */; };
+		2BDE665C1E3EB3AB001DA3A6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE665B1E3EB3AB001DA3A6 /* DataManager.swift */; };
+		2BFFCF261E3B804800AE5AD5 /* MainNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFFCF251E3B804800AE5AD5 /* MainNode.swift */; };
+		2BFFCF281E3B816600AE5AD5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFFCF271E3B816600AE5AD5 /* Person.swift */; };
+		D016FAE83A15202DED71D66B /* Pods_Olivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFD52ADAA36FE8271610C2E /* Pods_Olivia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B332F791E450068009BA50A /* PagerCellNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerCellNode.swift; sourceTree = "<group>"; };
+		2B4DE4141E3D48E5005FD3A2 /* perfectly amicable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "perfectly amicable.ttf"; path = "Fonts/perfectly amicable.ttf"; sourceTree = "<group>"; };
 		2B848AF31E262F2500059934 /* Olivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Olivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B848AF61E262F2500059934 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B848AF81E262F2500059934 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2B848AFB1E262F2500059934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B848AFD1E262F2500059934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B848B001E262F2500059934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B848B021E262F2500059934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +56,15 @@
 		2B848B121E262F2500059934 /* OliviaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OliviaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B848B161E262F2500059934 /* OliviaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OliviaUITests.swift; sourceTree = "<group>"; };
 		2B848B181E262F2500059934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B989F001E291CF100108049 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2BB8A5B21E432C19008FB750 /* PagerNodeDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerNodeDataProvider.swift; sourceTree = "<group>"; };
+		2BDE66561E3EAC88001DA3A6 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		2BDE665B1E3EB3AB001DA3A6 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		2BFFCF251E3B804800AE5AD5 /* MainNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNode.swift; sourceTree = "<group>"; };
+		2BFFCF271E3B816600AE5AD5 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		62C78FC685E146DF0B6D9B55 /* Pods-Olivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Olivia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Olivia/Pods-Olivia.debug.xcconfig"; sourceTree = "<group>"; };
+		B1E5854035266B559F65C85C /* Pods-Olivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Olivia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Olivia/Pods-Olivia.release.xcconfig"; sourceTree = "<group>"; };
+		FBFD52ADAA36FE8271610C2E /* Pods_Olivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Olivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D016FAE83A15202DED71D66B /* Pods_Olivia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +93,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		020D58E8C9E247AD8DD9233C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBFD52ADAA36FE8271610C2E /* Pods_Olivia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B26A8E71E27C6ED001454A9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2B4DE4141E3D48E5005FD3A2 /* perfectly amicable.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		2B848AEA1E262F2500059934 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +116,8 @@
 				2B848B0A1E262F2500059934 /* OliviaTests */,
 				2B848B151E262F2500059934 /* OliviaUITests */,
 				2B848AF41E262F2500059934 /* Products */,
+				965D8FC6B6D4E9B918501F73 /* Pods */,
+				020D58E8C9E247AD8DD9233C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,8 +135,11 @@
 			isa = PBXGroup;
 			children = (
 				2B848AF61E262F2500059934 /* AppDelegate.swift */,
-				2B848AF81E262F2500059934 /* ViewController.swift */,
-				2B848AFA1E262F2500059934 /* Main.storyboard */,
+				2BDE66581E3EAD11001DA3A6 /* Model */,
+				2BDE665A1E3EB329001DA3A6 /* View */,
+				2BDE66591E3EB31B001DA3A6 /* Controller */,
+				2B989F001E291CF100108049 /* API.swift */,
+				2B26A8E71E27C6ED001454A9 /* Fonts */,
 				2B848AFD1E262F2500059934 /* Assets.xcassets */,
 				2B848AFF1E262F2500059934 /* LaunchScreen.storyboard */,
 				2B848B021E262F2500059934 /* Info.plist */,
@@ -125,6 +165,43 @@
 			path = OliviaUITests;
 			sourceTree = "<group>";
 		};
+		2BDE66581E3EAD11001DA3A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BDE665B1E3EB3AB001DA3A6 /* DataManager.swift */,
+				2BFFCF271E3B816600AE5AD5 /* Person.swift */,
+				2BDE66561E3EAC88001DA3A6 /* Product.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2BDE66591E3EB31B001DA3A6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B848AF81E262F2500059934 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2BDE665A1E3EB329001DA3A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BB8A5B21E432C19008FB750 /* PagerNodeDataProvider.swift */,
+				2BFFCF251E3B804800AE5AD5 /* MainNode.swift */,
+				2B332F791E450068009BA50A /* PagerCellNode.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		965D8FC6B6D4E9B918501F73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62C78FC685E146DF0B6D9B55 /* Pods-Olivia.debug.xcconfig */,
+				B1E5854035266B559F65C85C /* Pods-Olivia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +209,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B848B1B1E262F2500059934 /* Build configuration list for PBXNativeTarget "Olivia" */;
 			buildPhases = (
+				EEEFDAB74B31F4C5CA18A0BD /* [CP] Check Pods Manifest.lock */,
 				2B848AEF1E262F2500059934 /* Sources */,
 				2B848AF01E262F2500059934 /* Frameworks */,
 				2B848AF11E262F2500059934 /* Resources */,
+				497A9B20ADA5839DBADFD4B8 /* [CP] Embed Pods Frameworks */,
+				8EA76C459494CE6CEDBB6446 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,8 +314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B848B011E262F2500059934 /* LaunchScreen.storyboard in Resources */,
+				2B4DE4151E3D48E5005FD3A2 /* perfectly amicable.ttf in Resources */,
 				2B848AFE1E262F2500059934 /* Assets.xcassets in Resources */,
-				2B848AFC1E262F2500059934 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,12 +335,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		497A9B20ADA5839DBADFD4B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Olivia/Pods-Olivia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EA76C459494CE6CEDBB6446 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Olivia/Pods-Olivia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEEFDAB74B31F4C5CA18A0BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B848AEF1E262F2500059934 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BB8A5B31E432C19008FB750 /* PagerNodeDataProvider.swift in Sources */,
+				2B989F011E291CF100108049 /* API.swift in Sources */,
+				2BDE66571E3EAC88001DA3A6 /* Product.swift in Sources */,
+				2BFFCF261E3B804800AE5AD5 /* MainNode.swift in Sources */,
+				2BDE665C1E3EB3AB001DA3A6 /* DataManager.swift in Sources */,
 				2B848AF91E262F2500059934 /* ViewController.swift in Sources */,
+				2BFFCF281E3B816600AE5AD5 /* Person.swift in Sources */,
+				2B332F7A1E450068009BA50A /* PagerCellNode.swift in Sources */,
 				2B848AF71E262F2500059934 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +432,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2B848AFA1E262F2500059934 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2B848AFB1E262F2500059934 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2B848AFF1E262F2500059934 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -411,27 +538,33 @@
 		};
 		2B848B1C1E262F2500059934 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62C78FC685E146DF0B6D9B55 /* Pods-Olivia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MTVD7A69KL;
 				INFOPLIST_FILE = Olivia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BTR.Olivia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		2B848B1D1E262F2500059934 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1E5854035266B559F65C85C /* Pods-Olivia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MTVD7A69KL;
 				INFOPLIST_FILE = Olivia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BTR.Olivia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -508,6 +641,7 @@
 				2B848B1D1E262F2500059934 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B848B1E1E262F2500059934 /* Build configuration list for PBXNativeTarget "OliviaTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +650,7 @@
 				2B848B201E262F2500059934 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B848B211E262F2500059934 /* Build configuration list for PBXNativeTarget "OliviaUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +659,7 @@
 				2B848B231E262F2500059934 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

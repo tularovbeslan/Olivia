@@ -29,9 +29,6 @@
                     maximumNumberOfLines:(NSUInteger)maximumNumberOfLines
                           exclusionPaths:(NSArray *)exclusionPaths
                          constrainedSize:(CGSize)constrainedSize
-              layoutManagerCreationBlock:(NSLayoutManager * (^)(void))layoutCreationBlock
-                   layoutManagerDelegate:(id<NSLayoutManagerDelegate>)layoutManagerDelegate
-                textStorageCreationBlock:(NSTextStorage * (^)(NSAttributedString *attributedString))textStorageCreationBlock
 
 {
   if (self = [super init]) {
@@ -42,14 +39,9 @@
     __instanceLock__ = std::make_shared<ASDN::Mutex>();
     
     // Create the TextKit component stack with our default configuration.
-    if (textStorageCreationBlock) {
-      _textStorage = textStorageCreationBlock(attributedString);
-    } else {
-      _textStorage = (attributedString ? [[NSTextStorage alloc] initWithAttributedString:attributedString] : [[NSTextStorage alloc] init]);
-    }
-    _layoutManager = layoutCreationBlock ? layoutCreationBlock() : [[ASLayoutManager alloc] init];
+    _textStorage = (attributedString ? [[NSTextStorage alloc] initWithAttributedString:attributedString] : [[NSTextStorage alloc] init]);
+    _layoutManager = [[ASLayoutManager alloc] init];
     _layoutManager.usesFontLeading = NO;
-    _layoutManager.delegate = layoutManagerDelegate;
     [_textStorage addLayoutManager:_layoutManager];
     _textContainer = [[NSTextContainer alloc] initWithSize:constrainedSize];
     // We want the text laid out up to the very edges of the container.
@@ -60,18 +52,6 @@
     [_layoutManager addTextContainer:_textContainer];
   }
   return self;
-}
-
-- (CGSize)constrainedSize
-{
-  ASDN::MutexSharedLocker l(__instanceLock__);
-  return _textContainer.size;
-}
-
-- (void)setConstrainedSize:(CGSize)constrainedSize
-{
-  ASDN::MutexSharedLocker l(__instanceLock__);
-  _textContainer.size = constrainedSize;
 }
 
 - (void)performBlockWithLockedTextKitComponents:(void (^)(NSLayoutManager *,

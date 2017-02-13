@@ -180,8 +180,10 @@ class MainNode: ASDisplayNode {
             switch segmentIndex {
             case 1:
                 self.pagerNodeDataProvider(with: self.favourites)
+                self.followButton.isHidden = true
             default:
                 self.pagerNodeDataProvider(with: self.products)
+                self.followButton.isHidden = false
             }
         }
         return segmentio
